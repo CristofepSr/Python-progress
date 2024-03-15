@@ -48,5 +48,11 @@ def divicion(num1, num2):#Hecho por cristofep
     resul = num1 / num2
     return f'<center><h1>{num1} ÷ {num2} = {resul}</h1></center>'
 
+# Divicion
+@app.route('/potencia/<num1>/<num2>')
+def potencia(num1, num2):#Hecho por cristofep
+    resul = num1 ** num2
+    return f'<center><h1>{num1} ^ {num2} = {resul}</h1></center>'
+
 if __name__ == '__main__':
     app.run(port=5500, debug=True )#Hecho por cristofep
