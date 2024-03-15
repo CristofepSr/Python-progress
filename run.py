@@ -50,9 +50,18 @@ def divicion(num1, num2):#Hecho por cristofep
 
 # Divicion
 @app.route('/potencia/<num1>/<num2>')
-def potencia(num1, num2):#Hecho por cristofep
-    resul = num1 ** num2
-    return f'<center><h1>{num1} ^ {num2} = {resul}</h1></center>'
+@app.route('/potencia/<num1>/<num2>/<num3>')
+@app.route('/potencia/<num1>/<num2>/<num3>/<num4>')
+def potencia(num1, num2, num3 ,num4):#Hecho por cristofep
+    if num4 == None and num3 == None:
+        resul = num1 ** num2
+        return f'<center><h1>{num1} ^ {num2} = {resul}</h1></center>'
+    elif num4 == None:
+        resul = num1 ** num2 ** num3
+        return f'<center><h1>{num1} ^ {num2} ^ {num3} = {resul}</h1></center>'
+    else: #Hecho por cristofep
+        resul = num1 ** num2 ** num3 ** num4
+        return f'<center><h1>{num1} ^ {num2} ^ {num3} ^ {num4} = {resul}</h1></center>'
 
 if __name__ == '__main__':
     app.run(port=5500, debug=True )#Hecho por cristofep
