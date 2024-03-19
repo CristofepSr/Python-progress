@@ -57,13 +57,13 @@ def multuplicacion(num1, num2, num3 = None, num4 = None):
 def divicion(num1, num2, num3 = None, num4 = None):
     if num4 == None and num3 == None:
         resul = num1 * num2
-        return f'<center><h1>{num1} x {num2} = {resul}</h1></center>'
+        return f'<center><h1>{num1} ÷ {num2} = {resul}</h1></center>'
     elif num4 == None:
         resul = num1 * num2 * num3
-        return f'<center><h1>{num1} x {num2} x {num3} = {resul}</h1></center>'
+        return f'<center><h1>{num1} ÷ {num2} ÷ {num3} = {resul}</h1></center>'
     else: 
         resul = num1 * num2 * num3 * num4
-        return f'<center><h1>{num1} x {num2} x {num3} x {num4} = {resul}</h1></center>'
+        return f'<center><h1>{num1} ÷ {num2} ÷ {num3} ÷ {num4} = {resul}</h1></center>'
 
 
 # Potencia
@@ -83,6 +83,8 @@ def potencia(base, num1, num2 ,num3, num4):
         return f'<center><h1>{base} ^ {num1} ^ {num2} ^ {num3} = {resul}</h1></center>'
     else:
         resul = base ** num1 ** num2 ** num3 ** num4
+        return f'<center><h1>{base} ^ {num1} ^ {num2} ^ {num3} ^ {num4} = {resul}</h1></center>'
+        
 
 if __name__ == '__main__':
     app.run(port=5500, debug=True )
